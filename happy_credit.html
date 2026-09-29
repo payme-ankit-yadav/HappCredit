@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+{% macro company_address() %}
+    <td class="a" style="width:50%;vertical-align: top;text-align:right; border: none;">
+        708, Gopal Heights, Netaji Subhash Place,<br/>
+        Shakurpur, Delhi, 110034,<br/>
+        CIN: U67120DL1995PTC067741,<br/>
+        Email: happy2help.pas@gmail.com
+    </td>
+{% endmacro %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sanction Letter</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        p {
+            font-size: 14px;
+            padding-bottom: 20px;
+            color: #000;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        li {
+            display: block;
+            color: #000;
+            padding-bottom: 20px;
+            font-size: 14px;
+
+            p {
+                padding-bottom: 20px;
+            }
+        }
+
+        li:before {
+            content: counters(item, ".") ".";
+            counter-increment: item;
+            padding-right: 10px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0px 15px;
+            margin: 0 auto;
+        }
+
+        .main {
+            padding: 30px 0px;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        @page {
+            @top-right {
+                content: "Page "counter(page) " of "counter(pages);
+            }
+
+            @top-left {
+                content: "{{ reference_number }}";
+            }
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        #title {
+            text-align: center;
+            color: #fc5f04;
+            text-decoration: underline;
+        }
+
+        #sanction {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+
+        .table1,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left
+        }
+
+        .table2 {
+            padding: 10px;
+            text-align: left
+        }
+
+        .table2 .a,
+        .table2 .a {
+            text-align: left;
+            border: 1px solid #fff;
+        }
+
+        hr {
+            height: 2px;
+            border-width: 0;
+            color: gray;
+            background-color: gray
+        }
+
+        .inner-grid,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left
+        }
+
+        @page {
+            @top-right {
+                content: "Page "counter(page) " of "counter(pages);
+            }
+        }
+
+        body {
+            font-family: arial, sans-serif !important;
+            font-size: 14px;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            font-family: arial, sans-serif;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .w-50 {
+            width: 50%;
+        }
+
+        .w-40 {
+            width: 40%;
+        }
+
+        .w-20 {
+            width: 20%;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #000;
+            text-align: left;
+            padding: 8px;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        tr.blank td {
+            padding: 20px 0px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        ol,
+        ul {
+            padding-left: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-family: arial, sans-serif;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .kfs-sc {
+            padding: 50px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer {
+            margin-top: 40px;
+        }
+
+        .footer img {
+            width: 100%;
+        }
+
+        .kfs-sc h1 {
+            color: #152745;
+            font-size: 2.5rem;
+        }
+
+        .financial_sc table {
+            font-size: 14px;
+        }
+
+        .financial_sc table tr td {
+            width: 50%;
+        }
+
+        .t_inr_t td {
+            text-align: center;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
+
+    <head>
+
+    <body>
+
+        <!-- English Section -->
+        <section>
+            <div class="container">
+                <table class='table2' style="width:100%; border: none;">
+                    <tr style="border: none;">
+                        <td class='a' style="width:50%; border: none;">
+                            <img src="https://d16865b1txvahc.cloudfront.net/scaleup/scaleup_logo.png"
+                                style="height: 50px">
+                        </td>
+                        <td class="a" style="width:50%;vertical-align: top;text-align:right; border: none;">
+                            708, Gopal Heights, Netaji Subhash Place,<br/>
+                            Shakurpur, Delhi, 110034,<br/>
+                            CIN: U67120DL1995PTC067741,<br/>
+                            Email: happy2help.pas@gmail.com
+                        </td>
+                    <tr style="border: none;">
+                </table>
+                <br />
+
+                <h2 id='title'>P.A. Securities Private Limited</h2>
+                <br/>
+                <p id="sanction"><b>SANCTION LETTER</b></p>
+                <p>Dear {{ name }},</p>
+                <p>Sub: <b><u>Short Term Personal Loan Sanction letter Cum Key Fact Statement</u></b></p>
+                <p> We hereby confirm that your  <strong><u>Loan Application Number HCF << Loan Application Number >> </u></strong>is approved by<strong>P.A. Securities Private Limited</strong></ul> as per the following terms & conditions. Your loan amount will be deposited into the bank account mentioned below. </p>
+
+                <table class="table1" style="width:100%">
+                    <tr>
+                        <td style="width:5%">1.</td>
+                        <td style="width:30%"><b>Loan Amount</b></td>
+                        <td style="width:65%"><u>{{ credit_limit }}</u></td>
+                    </tr>
+
+                    <tr>
+                        <td>2.</td>
+                        <td><b>Interest Rate</b></td>
+                        <td><b><u>{{ interest }}</u>% Daily with annualised interest rate <u>{{ roi_yearly }}</u>%</b>
+                        </td>
+                    </tr>
+                </table>
+
+                <br />
+
+                <p>As of effective date, the Schedule of interest and the charges are as follows:</p>
+                <table class="table1" style="width:100%;">
+                    <tr>
+                        <td style="width:15%"><b>Interest on the Loan</b></td>
+                        <td style="width:85%"><b>{{ interest }}% per day from the date of disbursal until the date of
+                                repayment. </b></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Processing Fee</b></td>
+                        <td><b>Lender will charge a processing fee of INR 300 or {{ processing_fee_percent }}% of the
+                                loan
+                                amount whichever is higher, plus applicable taxes.</b></td>
+
+                    </tr>
+
+                    <tr>
+                        <td><b>Penal Charges</b></td>
+                        <td><b>In case of delay in payment of amount due, Penal charges shall be @10% on Principal o/s
+                                subject to a minimum of INR 100 and a maximum of INR 3, 000 excluding taxes.</b></td>
+                    <tr>
+                    <tr>
+                        <td><b>Bounce Charges</b></td>
+                        <td>
+                            <table class="inner-grid">
+                                <tr>
+                                    <td>Amount</td>
+                                    <td>Bounce Fee (excluding GST)</td>
+                                </tr>
+                                <tr>
+                                    <td>0-2000</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>2001-5000</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td>5001-8000</td>
+                                    <td>300</td>
+                                </tr>
+                                <tr>
+                                    <td>8001-10000</td>
+                                    <td>400</td>
+                                </tr>
+                                <tr>
+                                    <td>10001+</td>
+                                    <td>500</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Maximum interest rate</b></td>
+                        <td>The Interest rate on the loan shall not exceed 30% per month.</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"></td>
+
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <p>*As the Loan sanctioned is Bullet Loan (one-time repayment), the nature of Interest
+                                applied is
+                                Flat rate of interest.</p>
+                            <p>The Lender, may at its sole discretion, waive or reduce the charges as mentioned above,
+                                on a case to case
+
+                                basis.</p>
+                        </td>
+
+                    </tr>
+                </table>
+
+                <br /><br /><br /></br><br>
+                <p>Signed, Sealed and delivered, </p>
+                <p>
+                        <!-- For any queries, you may write to us at <a
+                            href="mailto:care@pmifs.com"><b>care@pmifs.com</b></a><br /> -->
+                        For any queries, you may write to us at <a
+                            href="mailto:care@scaleupfinancial.com"><b>care@scaleupfinancial.com</b></a><br />
+
+                        Look forward to serving you.<br />
+
+                        Kind Regards<br />
+
+                        <img src="https://wwwstatic-prod.s3.ap-south-1.amazonaws.com/images/Sujit.png" alt="logo" width="150" height="50" style="width: 150px; height: 50px;"><br />
+
+                        Sujeth Das<br />
+
+                        Head. Credit<br />
+                    </p>
+            </p>
+            <p><strong>Digital signature of the customer</strong></p>
+                
+                <p><img class="fingerImage"
+                        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAA6ADoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAopjyxx43uq54G44zTwQRkHIoAKKKKACiiigDjJfGGuXOo38Oh+F/7TtrO4a3af7esJLrjcNrr2ORwTkYPeq8sfxB8RnbutPCtqMhsFbu4Y/UfLtOexDAr3Bqb4YyLN4dvZGx9rbUZ/tYHUSjAOffAWu1oA8t1LwV8N9HZx4r1X7ZqDRb2m1TVG+0NHk4ICspIyCAQM8EZPNZmh+E/hh4shuh4MvZtP1aHJiuIbmZZ4iMEOEkbJXkDPHXqDzXNa7q/hrxJ8SNXbxxc3tpDpcnkWb6aqvFHGGwDLLGGfcWOQuAEOR1JFXNa8E+DdbSM3HxYtZlgXFvJd3FtNOi8kAyZDsASeO1AGho03j658VXnhfWPiA2maxCvnQINMgmiuYf76NwQeDlSM9+ecdV/wi3j9f+apr+Oh2/8A8VXG/C34aeEPEvhe5vNV0g3xiv54LfUPNuIftkKkbZdm8AZJI4/u885rtv8AhSXw8/6F7/yduP8A45QBlw+JPEvhfxbo+i6n4k0vxNFqNyIJI4LdYbyDcDh9iHHljGST2zXqlYOg+CvDXhhg+jaNaWku0p5ypuk2nqN7ZbHA71vUAec3HgbxZpl9rFx4V8WRWFvf3Ml6LSaySQec4GcuQSASOw4HY021+IK6j4V1rT9csb6w8SWFq6XenWgYTyZG0SW5GSVJIO4Z29ScYY+kVieIfCOieKVtzqtn5k1q/mW9xHI0csTequpBHrjOMgHsKAPIPhre+KrLwhbt4cudC8R2ABa40PesF1bBmOBvwASeSxcc7TtznNQatp0vjNr/AMH6X8MtH0PVEEL3N8J7cmzUsGB/dpnLBSMA5wemDXoo+D/g8XbXpt79r8nP2w6jP52cY+9v9OK6Dw34Q0PwlFcpo1l5DXT+ZPK8jSSSt6szEk9Tx05PqaANmGJYYI4lACooUYGOlPoooAKKKKACiiigAooooAKKKKACiiigD//Z" />
+                </p>
+                <p
+                    style="color: white; font-size: 100px; line-height: 100px; padding: 0; margin: 0; position: relative;">
+                    Sign Here</p>
+                <p>____________________________________________<span style="font-size: 50px;">&#x270D;</span></p>
+                <p><strong>SIGNED AND DELIVERED by the within named Borrower</strong></p>
+
+
+                <div class="footer page-break">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="kfs-sc bg">
+            <div class="container">
+                <div class="kfs-inner">
+                    <table class='table2' style="width:100%; border: none;">
+                        <tr style="border: none;">
+                            <td class='a' style="width:50%; border: none;">
+                                <img src="https://d16865b1txvahc.cloudfront.net/scaleup/scaleup_logo.png"
+                                    style="height: 50px">
+                            </td>
+                           <td class="a" style="width:50%;vertical-align: top;text-align:right; border: none;">
+                            708, Gopal Heights, Netaji Subhash Place,<br/>
+                            Shakurpur, Delhi, 110034,<br/>
+                            CIN: U67120DL1995PTC067741,<br/>
+                            Email: happy2help.pas@gmail.com
+                        </td>
+                        <tr style="border: none;">
+                    </table>
+                    <br /><br />
+                    <table style="margin-bottom: 20px;">
+                        <tr style="border: none;">
+                            <td style="border: 0;text-align: left; padding: 0;">
+                                To,
+                                {{borrower_name}},<br />
+                                {{address}} &nbsp; {{pincode}}<br />
+
+                            </td>
+                            <td style="border: 0;text-align: right; padding: 0;">
+                                Date:{{today_date}}
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="body-sc">
+                        <p>Sub -<strong> Loan Sanction letter Cum Key Fact Statement</strong></p>
+                        <p>We hereby confirm that your loan is approved by ScaleUp Financial Services Private Limited (formerly known as PayMe India Financial Services Private Limited) as per the following terms & conditions. Your loan amount will be deposited into the bank account mentioned below. </p>
+                        <p class="text-center"><strong>PART 1</strong></p>
+                        <table>
+                            <tr>
+                                <td class="w-10">1.</td>
+                                <td colspan="2" class="w-50 bold">Name of the Lender</td>
+                                <td colspan="2" class="w-50">SCALE UP FINANCIAL SERVICES PVT. LTD.</td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td colspan="2" class="w-50 bold">Name of the Borrower</td>
+                                <td colspan="2" class="w-50">{{borrower_name}}</td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td colspan="2" class="w-50 bold">Name of the Lending Service Provider (LSP)</td>
+                                <td colspan="2" class="w-50">Huey Tech Private Limited</td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td colspan="2" class="w-50 bold">Name of the Digital Lending Application (DLA)</td>
+                                <td colspan="2" class="w-50">PayMe</td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td colspan="2" class="w-50 bold">Name of the of Loan Service Provider acting as
+                                    recovery
+                                    agent and authorized to approach
+                                    the Borrower</td>
+                                <td colspan="2" class="w-50">Huey Tech Pvt. Ltd.</td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td colspan="2" class="w-50 bold">Purpose of the Loan</td>
+                                <td colspan="2" class="w-50">{{purpose_loan}}</td>
+                            </tr>
+                            <tr>
+                                <td>7.</td>
+                                <td class="bold">Loan proposal/ account No. </td>
+                                <td>{{loan_ref_no}}</td>
+                                <td class="bold">Type of loan</td>
+                                <td>BULLET LOAN / ONE TIME REPAYMENT</td>
+                            </tr>
+                            <tr>
+                                <td>8.</td>
+                                <td colspan="2" class="w-50 bold">Sanctioned Loan amount (in Rupees)</td>
+                                <td colspan="2" class="w-50">{{loan_amount}}</td>
+                            </tr>
+                            <tr>
+                                <td>9.</td>
+                                <td colspan="2" class="w-50 bold">Net disbursed amount</td>
+                                <td colspan="2" class="w-50">INR {{disbursed_amount}} after deduction of Processing Fee;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10.</td>
+                                <td colspan="2" class="w-50">
+                                    <b>Disbursal schedule</b><br />
+                                    (i) Disbursement in stages or 100% upfront. <br />
+                                    (ii) If it is stage wise, mention the clause of loan agreement having relevant
+                                    details
+                                </td>
+                                <td colspan="2" class="w-50">100% upfront</td>
+                            </tr>
+                            <tr>
+                                <td>11.</td>
+                                <td colspan="2" class="w-50 bold">Loan term (year/months/days)</td>
+                                <td colspan="2" class="w-50">{{tenure}}</td>
+                            </tr>
+                            <tr>
+                                <td>12.</td>
+                                <td colspan="2" class="w-50 bold">Cooling Off/ Look up Period </td>
+                                <td colspan="2" class="w-50">3 days</td>
+                            </tr>
+                            <tr>
+                                <td>13.</td>
+                                <td colspan="2" class="w-50 bold">Instalment details</td>
+                                <td colspan="2" class="w-50"></td>
+                            </tr>
+                            <tr>
+                                <td>i.</td>
+                                <td>Type of instalments </td>
+                                <td>Number of EPIs </td>
+                                <td>EPI (Rs)</td>
+                                <td>Commencement of repayment, post sanction</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>Bullet</td>
+                                <td>{{no_of_installment}}</td>
+                                <td>{{amount_emi}}</td>
+                                <td>{{tenure}}</td>
+                            </tr>
+                            <tr>
+                                <td>14.</td>
+                                <td colspan="2" class="w-50 bold">Interest rate (%) and type (fixed or floating or
+                                    hybrid)
+                                </td>
+                                <td colspan="2" class="w-50">{{annual_roi}} per annum/year and/ or {{monthly_roi}} % on
+                                    a
+                                    monthly
+                                    basis; +
+                                    (plus);</td>
+                            </tr>
+                            <tr>
+                                <td>(a)</td>
+                                <td colspan="2" class="w-50 bold">Total Interest Amount to be charged during the entire
+                                    loan
+                                    tenor (in rupees) </td>
+                                <td colspan="2" class="w-50">{{total_interest}}</td>
+                            </tr>
+                            <tr>
+                                <td>15.</td>
+                                <td colspan="4"><b>Fee/Charges</b></td>
+                            </tr>
+                        </table><br /><br />
+                        <p>A cooling off period allows you / Borrower / end-user to cancel or withdraw from the loan
+                            until
+                            the Cooling-off Period. Upon expiry of the Cooling-off Period, the loan terms shall be
+                            deemed to
+                            be accepted by you. The Cooling-off Period on the loan commences / starts from the date of
+                            signing / accepting the loan terms / agreement and ends on the third (3) day from such
+                            acceptance . The Lender shall not levy any penalty or pre-payment charges for cancellation
+                            during the Cooling-off Period.</p>
+                        <p>To apply for cancellation of loan during the Cooling-off Period, a request must be submitted
+                            by
+                            the Borrower at <a href="care@scaleupfinancial.com">care@scaleupfinancial.com</a> and <a
+                                href="grievance@paymeindia.in">grievance@paymeindia.in</a>. After submission of such
+                            request, the Borrower must submit a copy of
+                            the bank account statement in which the said loan amount was disbursed along with an
+                            undertaking
+                            that such loan amount was not utilized by the Borrower during the Cooling-off Period.</p>
+                        <p>The cancellation request will only be accepted, if (a) the loan has not been utilized; and
+                            (b)
+                            the Borrower repays the principal amount along with the proportionate Rrate of Iinterest</p>
+                        <p>As the Loan sanctioned is Bullet Loan (one-time repayment), the nature of Interest applied is
+                            Flat rate of interest.</p>
+                        <br /><br />
+                        <table>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td colspan="4" class="w-40">Payable to ScaleUp Financial Services Private Limited</td>
+
+                            </tr>
+                            <tr>
+                                <td>(a)</td>
+                                <td>Type of Fee/ Charge</td>
+                                <td colspan="2">One-time/ Recurring</td>
+                                <td colspan="2">Amount (in Rs) or Percentage (%) as applicable</td>
+
+                            </tr>
+                            <tr>
+                                <td class="w-10">(i)</td>
+                                <td class="w-20">Processing Fee</td>
+                                <td colspan="2" class="w-20">One-time</td>
+                                <td colspan="2" class="w-20">{{processing_fee}}</td>
+
+                            </tr>
+                            <tr>
+                                <td>(ii)</td>
+                                <td>Insurance charges</td>
+                                <td colspan="2" class="w-20">One-time</td>
+                                <td colspan="2" class="w-20">{{insurance_charge}}</td>
+
+                            </tr>
+                            <tr>
+                                <td>(iii)</td>
+                                <td>Taxes & Levies</td>
+                                <td colspan="2" class="w-20">The Loan and any other services rendered by the Lender and/
+                                    or
+                                    payments
+                                    made by the Borrower shall be subject to applicable taxes notified by the government
+                                    from time to time. The Borrower shall pay all taxes present and future on any
+                                    transactions undertaken with the Lender</td>
+                                <td colspan="2" class="w-20">NA</td>
+
+                            </tr>
+                            <tr>
+                                <td>(iv)</td>
+                                <td>Cost and Charges</td>
+                                <td colspan="2" class="w-20">1. Cheque/electronic Instrument bounce /non-registration of
+                                    NACH –<br />
+                                    2. Payment gateway charges for repayment – <br />
+                                    3. Stamp Duty –</td>
+                                <td colspan="2" class="w-20">NA</td>
+
+                            </tr>
+                            <tr>
+                                <td>16.</td>
+                                <td colspan="2" class="bold">Annual Percentage Rate (APR) (%)</td>
+                                <td colspan="3">{{apr}} % p.a.</td>
+                            </tr>
+                            <tr>
+                                <td>17.</td>
+                                <td colspan="5" class="bold">Details of Contingent Charges (in Rs or %, as applicable)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>(i)</td>
+                                <td colspan="3" class="bold">Penal charges, if any, in case of delayed payment</td>
+                                <td colspan="2" class="bold">According to Bounce Charge/ Penal Charges Grid</td>
+                            </tr>
+                            <tr>
+                                <td>(ii)</td>
+                                <td colspan="3">Other penal charges, if any</td>
+                                <td colspan="2">NA</td>
+                            </tr>
+                            <tr>
+                                <td>(iii)</td>
+                                <td colspan="3">Foreclosure charges, if applicable</td>
+                                <td colspan="2">NA</td>
+                            </tr>
+                            <tr>
+                                <td>(iv)</td>
+                                <td colspan="3">Any other charges (please specify)</td>
+                                <td colspan="2">NA</td>
+                            </tr>
+                            <tr>
+                                <td>18.</td>
+                                <td colspan="3" class="bold">Total Amount to be paid by the borrower (in Rupees)</td>
+                                <td colspan="2">INR {{amount_paid_borrower}}</td>
+                            </tr>
+                        </table><br /><br />
+                        <p class="text-center"><b>TABLE I: REPAYMENT SCHEDULE</b></p>
+                        <table>
+                            <tr>
+                                <td class="bold">EMI No.</td>
+                                <td class="bold">EMI Due Date</td>
+                                <td colspan="2" style="padding: 0;border: none;">
+                                    <table>
+                                        <tr>
+                                            <td colspan="2" class="text-center bold"
+                                                style="border-left: none;border-right: none;">EMI Amount</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-50"
+                                                style="border-left: none;border-bottom: none; font-weight: bold;">
+                                                Principal
+                                                (INR)</td>
+                                            <td class="w-50"
+                                                style="border-right: none;border-bottom: none; font-weight: bold;">
+                                                Interest
+                                                (INR)</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="bold">Total Repayable Amount </td>
+                            </tr>
+                            {% for item in repayment_schedule %}
+                            <tr>
+                                <td>{{item.sno}}</td>
+                                <td>{{item.due_date}}</td>
+                                <td>{{item.principal}}</td>
+                                <td>{{item.interest}}</td>
+                                <td>{{item.repayble}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table><br /><br />
+                        <p class="text-center"><b>Table II: Bounce Charge/ Penal Charges Grid</b></p>
+                        <ul>
+                            <li>One-time penal charges @ 10% + Applicable Taxes (If Any)</li>
+                            <li>Minimum Penal charges amount Rs. 100/- + Applicable Taxes (If Any)</li>
+                            <li>Maximum Penal charges amount Rs. 3000/- + Applicable Taxes (If Any)</li>
+                        </ul><br /><br />
+                        <table style="max-width: 500px; width: 100%; margin: 0 auto;">
+                            <tr>
+                                <td colspan="2" class="text-center"><b>Bounce Charges</b></td>
+                            </tr>
+                            <tr>
+                                <td class="w-50"><b>Amount</b></td>
+                                <td class="w-50"><b>Bounce Fee</b></td>
+                            </tr>
+                            <tr>
+                                <td class="w-50">0-2000</td>
+                                <td class="w-50">100</td>
+                            </tr>
+                            <tr>
+                                <td class="w-50">2001-5000</td>
+                                <td class="w-50">200</td>
+                            </tr>
+                            <tr>
+                                <td class="w-50">5001-8000</td>
+                                <td class="w-50">300</td>
+                            </tr>
+                            <tr>
+                                <td class="w-50">8001-10000</td>
+                                <td class="w-50">400</td>
+                            </tr>
+                            <tr>
+                                <td class="w-50">10001+</td>
+                                <td class="w-50">500</td>
+                            </tr>
+                        </table><br /><br />
+                        <p>_____________________________________</p>
+                        <p>APR shall be based on an all-inclusive cost and margin including cost of funds, credit cost
+                            and
+                            operating cost, processing fee, verification charges, maintenance charges, etc., except
+                            contingent charges like penal charges, late payment charges, etc.</p>
+                        <p class="bold">Details of Grievance Redressal Mechanism:</p>
+                        <p>In consonance with the guidelines set out by Reserve Bank of India (RBI) and other regulatory authorities, ScaleUp Financial Services Private Limited has formulated the Grievance Redressal Policy to address and resolve the complaints received from its customers. The said Grievance Redressal Policy is set out on the official website of ScaleUp Financial Services i.e. https://www.scaleupfinancial.com/grievance-redressal-mechanism/: </p>
+                        <p><b>Details of Grievance Redressal Officer:</b></p>
+                        <table>
+                            <tr>
+                                <td><strong>Level_1</strong></td>
+                                <td colspan="2"><strong>Grievance Redressal Officer (GRO)</strong><br />
+                                    Borrowers can refer to Grievance Redressal Policy at https://www.scaleupfinancial.com/grievance-redressal-mechanism/ 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>LSP</strong></td>
+                                <td><strong>Grievance Officer level I </strong><br /><br />
+                                    Help Desk <br/>
+                                    Address: Plot No-C-56A/10&11, Sector-62, Opposite Stellar IT Park Noida, District Gautam Budh Nagar, Uttar Pradesh-201301 <br/>
+                                    Contact No: 9319738612<br/>
+                                    Email: support@paymeindia.in <br/><br/>
+                                    The GRO may be reached on the number provided above any time between 10:00 and 19:00 from Monday to Saturday except on public holidays or through the e-mail address above. The GRO shall endeavour to resolve the grievance within a period of (14) fourteen days from the date of receipt of a grievance. 
+                                </td>
+                                <td><strong>Grievance Officer level II </strong><br /><br />                     
+                                    Mr. Azhar Khan <br/>
+                                    Address: Plot No-C-56A/10&11, Sector-62, Opposite Stellar IT Park Noida, District Gautam Budh Nagar, Uttar Pradesh-201301 <br/>
+                                    Contact: 9319738611 <br/>
+                                    Email: grievance@paymeindia.in <br/><br/>
+                                    If the Borrower does not receive a response from the GRO within 14 (fourteen) days of making a representation, or if the Borrower is not satisfied with the response received from the GRO, the Borrower may reach the Nodal Officer anytime between 10:00 to 19:00 from Monday to Saturdays except public holidays or write to the Nodal Officer.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>RE</strong></td>
+                                <td><strong>Grievance Redressal Officer (GRO)</strong><br /><br />
+                                    Shalini Rai <br/>
+                                    Address: 3rd Floor, Unit-301, Trapezoid Signia Park, Plot No-27 A, <br/>
+                                    Noida, Gautam Buddha Nagar, Noida UP 201301 <br/>
+                                    Contact: 9319738610 <br/>
+                                    Email: grievance@scaleupfinancial.com <br/><br/>
+                                    The GRO may be reached on the number provided above anytime between 10:00 and 19:00 from Monday to Saturdays except public holidays or through the e-mail address above. The GRO shall endeavor to resolve the grievance within a period of (14) fourteen days from the date of receipt of a grievance. 
+                                </td>
+                                <td><strong>Nodal Officer</strong><br /><br />
+                                    Mr. Manav Munjal <br/>
+                                    Address: 3rd Floor, Unit-301, Trapezoid Signia Park, Plot No-27 A, <br/>
+                                    Noida, Gautam Buddha Nagar, Noida UP 201301 <br/>
+                                    Contact: 9891903339 <br/>
+                                    Email: nodal@scaleupfinancial.com <br/><br/>
+                                    If the Borrower does not receive a response from the GRO within 14 (fourteen) days of making a representation, or if the Borrower is not satisfied with the response received from the GRO, the Borrower may reach the Nodal Officer anytime between 10:00 to 19:00 from Monday to Saturdays except public holidays or write to the Nodal Officer. 
+                                </td>
+                            </tr>
+                        </table><br /><br />
+                        <p>If any customer is not satisfied with the resolution provided by the Grievance Redressal Officer, then escalation can be made to the: </p>
+                        <p> Reserve Bank Of India The Officer In-Charge <br/>
+                            Consumer Education and Protection Cell <br/>
+                            M.G Road, Kanpur - 208 001 <br/>
+                            Telephone: 0512-2332938
+                        </p>
+                        <p>The Designated Officer at Level 1 shall be responsible, inter alia, for representing ScaleUp Financial Services Private Limited before the Ombudsman and the Appellate Authority under the Scheme. The Designated Officer at Level 2 appointed at the Head Office of the Company shall be responsible for coordinating and liaising with the Customer Education and Protection Department (CEPD), RBI, Central Office.</p><br />
+                        <p><b>TERMS & CONDITIONS OF RECOVERY MECHANISM </b></p>
+                        <p>The Lender undertakes the recovery practices considering the following terms. </p>
+                        <ol>
+                                <li>In-house/Outsource Recovery </li>
+                                <li>Telephone Recovery {Human / IVR / Robo Calls} </li>
+                                <li>Digital Recovery </li>
+                                <li>Reminder Communication </li>
+                                <li>Legal Notice </li>
+                                <li>Arbitration & Conciliation </li>
+                        </ol>
+
+                        <p><b>Classification of Special Mention Accounts (SMA) & Non-Performing Assets (NPA)</b></p>
+                        <ul>
+                            <li>Dues: Indicate the principal/ interest/ any charges levied on the loan account which are
+                                payable within the period stipulated as per the terms of sanction of the credit
+                                facility.
+                            </li>
+                            <li>Overdue: Indicates the principal/ interest/ any charges levied on the loan account which
+                                are
+                                payable but have not been paid within the period stipulated as per the terms of sanction
+                                of
+                                the credit facility. In other words, any amount due to the Company under any credit
+                                facility
+                                is ‘overdue’ if it is not paid on the due date fixed by the Company. Which shall become
+                                a
+                                part of process of all the mandates related to consumer education literature on NPA and
+                                SMA
+                                classification of accounts. </li>
+                            <li><b>Following is the loan classification structure:</b></li>
+                        </ul>
+                        <table>
+                            <tr>
+                                <td><strong>Classification</strong></td>
+                                <td><strong>Days Past Due (DPD) Bucket</strong></td>
+                                <td><strong>Description</strong></td>
+                            </tr>
+                            <tr>
+                                <td>SMA – 0</td>
+                                <td>Upto 30 days</td>
+                                <td>If the due date of a loan account is March 31, 2024, and full dues are not received
+                                    before the day-end process for this date, the date of overdue shall be March 31,
+                                    2024,
+                                    and it shall get tagged as SMA-0 on March 31, 2024. </td>
+                            </tr>
+                            <tr>
+                                <td>SMA – 1</td>
+                                <td>More than 30 days and upto 60 days</td>
+                                <td>Continuing from the above, if the account continues to remain overdue, then it shall
+                                    get
+                                    tagged as SMA-1 by day-end process on April 30, 2024, upon completion of 30 days of
+                                    being continuously overdue.</td>
+                            </tr>
+                            <tr>
+                                <td>SMA – 2</td>
+                                <td>More than 60 days and upto 90 days</td>
+                                <td>Continuing from the above, if the account continues to remain overdue, then it shall
+                                    get
+                                    tagged as SMA-2 by day-end process on May 30, 2024, upon completion of 60 days of
+                                    being
+                                    continuously overdue. </td>
+                            </tr>
+                            <tr>
+                                <td>NPA</td>
+                                <td>More than 90 days</td>
+                                <td>Continuing from the above, if the account continues to remain overdue, it shall be
+                                    classified as NPA by day-end process on June 29, 2024, upon completion of 90 days of
+                                    being continuously overdue. Once an account becomes NPA, it shall remain to be
+                                    tagged as
+                                    NPA until all overdue amounts are cleared and the DPD becomes 0. Any partial
+                                    payments
+                                    will not change the NPA status. </td>
+                            </tr>
+                        </table><br /><br /><br />
+                        <p><b>Declaration: </b><br/>
+I, {{borrower_name}}(“Customer”), hereby declare and state that I understand English and have read and understood the terms and conditions of Sanction Letter cum Key Fact Statement. I acknowledge the receipt of the Sanction Letter cum Key Fact Statement of ScaleUp Financial Services Private Limited for Personal Loan. <br/><br/>
+For any queries, you may write to us at care@scaleupfinancial.com <br/><br/>
+Look forward to serving you. <br/>
+                        </p>
+                    </div>
+                    <p>Signed, Sealed and delivered, </p>
+
+                <p>
+                        <!-- For any queries, you may write to us at <a
+                            href="mailto:care@pmifs.com"><b>care@pmifs.com</b></a><br /> -->
+                        For any queries, you may write to us at <a
+                            href="mailto:care@scaleupfinancial.com"><b>care@scaleupfinancial.com</b></a><br />
+
+                        Look forward to serving you.<br />
+
+                        Kind Regards<br />
+
+                        <img src="https://wwwstatic-prod.s3.ap-south-1.amazonaws.com/images/Sujit.png" alt="logo" width="150" height="50" style="width: 150px; height: 50px;"><br />
+
+                        Sujeth Das<br />
+
+                        Head. Credit<br />
+                    </p>
+            <p><strong>Digital signature of the customer</strong></p>
+                    <p><img class="fingerImage"
+                            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAA6ADoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAopjyxx43uq54G44zTwQRkHIoAKKKKACiiigDjJfGGuXOo38Oh+F/7TtrO4a3af7esJLrjcNrr2ORwTkYPeq8sfxB8RnbutPCtqMhsFbu4Y/UfLtOexDAr3Bqb4YyLN4dvZGx9rbUZ/tYHUSjAOffAWu1oA8t1LwV8N9HZx4r1X7ZqDRb2m1TVG+0NHk4ICspIyCAQM8EZPNZmh+E/hh4shuh4MvZtP1aHJiuIbmZZ4iMEOEkbJXkDPHXqDzXNa7q/hrxJ8SNXbxxc3tpDpcnkWb6aqvFHGGwDLLGGfcWOQuAEOR1JFXNa8E+DdbSM3HxYtZlgXFvJd3FtNOi8kAyZDsASeO1AGho03j658VXnhfWPiA2maxCvnQINMgmiuYf76NwQeDlSM9+ecdV/wi3j9f+apr+Oh2/8A8VXG/C34aeEPEvhe5vNV0g3xiv54LfUPNuIftkKkbZdm8AZJI4/u885rtv8AhSXw8/6F7/yduP8A45QBlw+JPEvhfxbo+i6n4k0vxNFqNyIJI4LdYbyDcDh9iHHljGST2zXqlYOg+CvDXhhg+jaNaWku0p5ypuk2nqN7ZbHA71vUAec3HgbxZpl9rFx4V8WRWFvf3Ml6LSaySQec4GcuQSASOw4HY021+IK6j4V1rT9csb6w8SWFq6XenWgYTyZG0SW5GSVJIO4Z29ScYY+kVieIfCOieKVtzqtn5k1q/mW9xHI0csTequpBHrjOMgHsKAPIPhre+KrLwhbt4cudC8R2ABa40PesF1bBmOBvwASeSxcc7TtznNQatp0vjNr/AMH6X8MtH0PVEEL3N8J7cmzUsGB/dpnLBSMA5wemDXoo+D/g8XbXpt79r8nP2w6jP52cY+9v9OK6Dw34Q0PwlFcpo1l5DXT+ZPK8jSSSt6szEk9Tx05PqaANmGJYYI4lACooUYGOlPoooAKKKKACiiigAooooAKKKKACiiigD//Z" />
+                    </p>
+                    <p
+                        style="color: white; font-size: 100px; line-height: 100px; padding: 0; margin: 0; position: relative;">
+                        Sign Here</p>
+                    <p>____________________________________________<span style="font-size: 50px;">&#x270D;</span></p>
+                    <p><strong>SIGNED AND DELIVERED by the within named Borrower</strong></p>
+                    <div class="footer page-break">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <div class="main">
+            <div class="container">
+                <table class='table2' style="width:100%;">
+                    <tr>
+                        <td class='a' style="width:50%; ">
+                            <img src="https://d16865b1txvahc.cloudfront.net/scaleup/scaleup_logo.png"
+                                style="height: 50px">
+                        </td>
+                       <td class="a" style="width:50%;vertical-align: top;text-align:right; border: none;">
+                            708, Gopal Heights, Netaji Subhash Place,<br/>
+                            Shakurpur, Delhi, 110034,<br/>
+                            CIN: U67120DL1995PTC067741,<br/>
+                            Email: happy2help.pas@gmail.com
+                        </td>
+                    <tr>
+                </table>
+                <br/>
+                <p class="text-center"><b>LOAN CUM COMMERCIAL TERMS</b></p>
+                Date: {{ effective_date }} <br/>
+                {{ name }} <br/>
+                {{ address }} <br/><br/>
+                <p>Upon clicking THE ‘I AGREE’ BUTTON, I will be deemed to have read, fully comprehended and accepted all the terms and conditions of these Terms and I shall be fully responsible for abiding by these Terms. If you do not agree with any of the terms and conditions of these Terms, please DO NOT click on the ‘I AGREE’ BUTTON. </p>
+                <p>By accepting & agreeing to these Terms and KFS (the "Terms"), you / customer ("Borrower"), which expression shall unless repugnant to the context or meaning thereof include a natural and juridical person, successors / legal heirs and permitted assigs has approached and requested for grant of credit facility / loan from ScaleUp Financial Services Private Limited (formerly known as PayMe India Financial Services Private Limited) having its registered oﬀice at 3rd Floor, Unit-301, Trapezoid Signia Park, Plot No-27 A, Noida, Gautam Buddha Nagar, Noida, Uttar Pradesh 201301 (“Lender”) under these terms & conditions disclosed herein. </p>
+                <p>The Borrower hereby understands and acknowledges that these Terms are for two loan products, namely (a) Bullet Repayment; (b) EMI / Installment and that based on the nature / type of Loan availed by me / us through the Application Form and thereafter accepted in the KFS, only the respective Loan product Terms shall apply. </p>
+                <ol>
+                    <li>Definition: In these Terms, the capitalized words shall have the following meanings. All terms capitalized but not defined below shall have such meaning as ascribed to them in the Commercial Terms: </li>
+                    <ol>
+                        <li><b>ANNUALISED PERCENTAGE RATE / APR</b> means the eﬀective annualised rate payable by the Borrower based on an all-inclusive cost and margin including cost of funds, credit cost and operating cost, processing fee, verification charges, maintenance charges, etc., and / or such specific costs indicated in the KFS </li>
+                        <li><b>APPLICATION FORM</b> means, direct application made by the Borrower for the Loan through web portal / mobile application of the Lender. </li>
+                        <li><b>BORROWER</b> means the individual availing the Loan from the Lender in under these Terms hereof and who has agreed to the terms and conditions contained in these Terms for the purpose of availing Loan. </li>
+                        <li><b>BULLET REPAYMENT</b> shall mean such Loan product where the Borrower repays the full Outstanding Amount on one fixed Due Date; </li>
+                        <li><b>COMMERCIAL TERMS</b> shall mean the terms applicable to the Loan as detailed in SCHEDULE I of these Terms. </li>
+                        <li><b>DUE DATE</b> shall mean such date identified in the Commercial Terms and KFS on which the EMI shall be due and payable by the Borrower. </li>
+                        <li><b>ECS OR NACH</b> means electronic clearing services / electronic payment services, consented to in writing by Borrower, for facilitating the payment of EMI, fees and other applicable charges to the Lender in connection with the Loan. </li>
+                        <li><b>ESSENTIAL DATA</b> means such data which is statutorily required by the Lender to be retained for compliance with applicable laws. </li>
+                        <li><b>EQUATED MONTHLY INSTALLMENT (EMI) / INSTALLMENT</b> shall mean such Loan product whereby the Borrower repays the Outstanding Amount at such frequency (monthly / quarterly) as indicated in the Commercial Terms on the respective Due Date during the Tenure of the Loan. </li>
+                        <li><b>GRIEVANCE REDRESSAL OFFICER</b> shall mean the officer named in the Commercial Terms and KFS who shall address and resolve the complaints / queries of Borrowers. </li>
+                        <li><b>LOAN</b> means the credit facility granted / agreed to be granted by the Lender to the Borrower. </li>
+                        <li><b>KFS</b> shall mean the Key Fact Statement provided by the Lender before the execution of these Terms which lays down details such as Annual Percentage Rate, terms and conditions of recovery mechanism, details of Grievance Redressal Officer, and Cooling-off/ Look-up period. </li>
+                        <li><b>OUTSTANDING AMOUNT</b> shall mean all amounts pertaining to the Loan whether by way of the principal amount together with any EMI, accrued interest, default charges / interest, Prepayment charges, bounce charges and/or any other cost and charges indicated herein or the Commercial Terms or KFS. </li>
+                        <li><b>PREPAYMENT</b> means premature repayment of the Loan in full, including principal amount, interest thereon, and all Outstanding Amount which is not yet due for payment by the Borrower under the Terms. </li>
+                        <li><b>REPAYMENT SCHEDULE</b> shall mean the schedule shared by the Lender which indicates the Outstanding Amount and the Due Date on which the said Outstanding Amount is to be repaid by the Borrower. </li>
+                        <li><b>REPAYMENT INSTRUMENT</b> shall mean an ECS / NACH / standing instructions / cheque / post-dated cheque (PDC) and / or such other negotiable instrument or mode of payment that may be notified by the RBI from time to time. </li>
+                        <li><b>RBI</b> shall mean the Reserve Bank of India. </li>
+                        <li><b>TENURE</b> shall mean the months / years as indicated in the Commercial Terms and KFS. </li>
+                    </ol>
+                    <li><b>Borrower's Representations, Warranties and Undertakings:</b> The Borrower hereby represents and warrants as follows: (a) the Borrower is competent to enter into a contract, of sound mind and attained majority and capable of discharging obligations under these Terms; (b) the Borrower is of good financial standing and in a position to meet his / her ongoing existing obligations and has not been served with (or threatened with) a notice of insolvency or bankruptcy and is capable of repayment of the Outstanding Amount under these Terms; (c) to keep sufficient funds in his / her bank account for servicing the EMI and shall ensure until the repayment; (d) that it shall be fully responsible for ensuring information security of access to its emails and other modes of communication with the Lender, including acceptance of these Terms; (e) that in the event of any disagreement or dispute between the Lender and Borrower regarding the materiality or reasonableness of any matter, the opinion of the Lender on any of the foregoing shall be final and binding; (f) that the information, details and documents furnished by the Borrower to the Lender in connection with or for obtaining the Loan in these Terms or the Application Form are true, complete and correct and is not misleading in any respect; (g) the Borrower authorizes the Lender to access data and information including location, CIBIL history, or any other access necessary for the purpose of granting the Loan, on-boarding, collection and verification of KYC, collection of repayment and related processes for recovery etc.; (h) the Borrower hereby agrees and acknowledges that the Lender shall store the Essential Data provided by the Borrower in relation to the Loan for five (5) to eight (8) years as per applicable laws / regulations; (i) the Borrower hereby confirms that the Loan shall be utilized only for the Purpose as declared by the Borrower in the Application Form and as agreed in the KFS. The Borrower shall submit an end use certificate as and when required by the Lender for use of Loan proceeds. </li>
+                    <li><b>Loan disbursement :</b> The Lender shall disburse the Loan into an account specified in Commercial Terms, below and/ or such other account as indicated in the Loan disbursal request form (“DRF”). </li>
+                    <li><b>Repayment:</b> The Borrower hereby agrees and undertakes: 
+                        <ol>
+                            <li>to issue such Repayment Instruments for: (a) Bullet Repayment Loan; (b) EMI Loan, respectively based on the type of Loan product agreed to be availed by the Borrower. The Borrower shall repay the Loan for such amount and at such intervals as is specified in the Commercial Terms, KFS and / or Repayment Schedule shared by the Lender from time to time. The Borrower understands and acknowledges that Lender may collect repayment directly by itself or through third party agents, as appointed by the Lender. The Borrower further undertakes to extend all co-operation with such third-party agents to ensure that due fulfillment of Borrower's obligations under these Terms and to obtain a valid discharge against the Outstanding Amounts. </li>
+                            <li>that should at any time during the Tenure of the Loan, if instructions for stop payment, cancellation of a Repayment Instrument and /or fail to confirm / register the ECS / NACH, the same shall be treated as dishonour / bounce of the Repayment Instrument, and the Loan shall be recalled at the discretion of the Lender. </li>
+                            <li>that upon delay and / or non-payment of Outstanding Amounts on the respective Due Date, the Lender shall have the right to classify the Borrower and its accounts as Special Mention Account ("SMA”) and / or Non-Performing Asset (“NPA”), as detailed below: </li>
+                            If the Due Date is second (2nd) day of every month and the Borrower pays the Instalment amount on thirtieth (30th) of the month, the Lender shall levy Default Charges / Interest starting from third (3rd) uptil thirtieth (30th). In the second scenario, if the Borrower does not pay on the Due Date and the Outstanding Amount remain unpaid for a continuous period of thirty (30) days, the Lender shall have the right to: (a) levy Default Charges / Interest; and (b) report the Borrower as an SMA-0. If the Borrower further continues to default in repayment from a period of thirty (30) days up to sixty (60) days, the Lender shall report the Borrower as SMA-1 and levy Default Charges / Interest.
+                            If the Borrower further continues to default in repayment from a period of sixty (60) days up to ninety (90) day, the Lender shall report the Borrower as SMA-2 and levy Default Charges / Interest. Further, if the Borrower defaults in repayment beyond ninety (90) days, the Lender shall report the Borrower as NPA and levy Default Charges / Interest. The Lender shall additionally have the right to call and Event of Default in accordance with Clause 8, below, at any time upon an event of non-payment. 
+                        </ol>
+                    </li>
+                    <li><b>Interest & costs:</b> The Borrower shall pay interest on the Loan at the Rate of Interest specified in the Commercial Terms from the date when the Loan is disbursed. The Lender shall inform the Borrower regarding any change in Rate of Interest by way of publishing a notice that shall be displayed on the notice board in the branch of the Lender or on the Lender's website. The said notice of change of Rate of Interest shall be deemed to be suﬀicient notice of change to the Borrower. The Borrower shall pay on the Loan, processing fee, stamp duty, and such other fees and charges indicated in the KFS and/ or notified by the Lender. Further, the Borrower undertakes to pay such fees / charges/ costs that comprise the Annual Percentage Rate, as mentioned in the Commercial Terms and KFS. The Borrower understands that Loan is subject to applicable taxes and such other statutory levies as may be notified by the government from time to time. All such taxes and levies shall be payable by the Borrower. </li>
+                    <li><b>Prepayment.</b> In the event the Borrower wishes to prepay the Loan, the same shall be subject to Prepayment Fees as indicated in the Commercial Terms. Such Prepayment Fees shall be levied or become applicable after expiry of the Cooling-off and / or Look-up period indicated in the Commercial Terms and KFS.</li> 
+                    <li><b>Default/Penal Charges:</b> In the event the Borrower fails to comply with the Terms including failure to repay the Loan on a Due Date and/ or such other Events of Default listed in Clause 8 below, the Lender shall be entitled to levy Default/ Penal charges set out in Commercial Terms and KFS on the Outstanding Amount from the date of default until full and final settlement. <br/><br/>
+                        <b>The Criteria, applicability, exclusion and quantum for above mentioned charges is as follows: </b>
+                        <ol>
+                            <li>Bounce changes are incident based i.e. whenever the repayment instrument (NACH/ECS/PDC) get bounced on the date of presentation of such instruments. </li>
+                            <li>These bounce charges are being levied by the Lender. </li>
+                            <li>The presentation of the instrument are as per the NPCI guidelines which is being amended on time to time </li>
+                            <li>As per the guidelines issued by NPCI, the above mentioned instrument can be presented once in a month and can be re-presented only twice in a month. </li>
+                            <li>Minimum criteria to levy bounce/penal charges will be: Rs. 100/- or 10% plus applicable taxes whichever is lower.</li>
+                            <li>Maximum criteria to levy bounce/ penal charges will be: Rs. 3,000/- or 10% plus applicable taxes whichever is lower.</li>
+                            <li>The penal charges mentioned in point no V. and VI. are applied to an individual / customer on a particoar loan bearing unique loan number or account and that too only once in a tenure till the date when the final repayment has been done by the customer i.e. the customer may only be able to take new loan only when he has paid all his due including the principal plus the normal interest any other penal/default charges as levied on him till the date of actual payment. </li>
+                        </ol>
+                    </li>
+                    <li><b>Events of Default and Remedies:</b> The following are the events of default under these Terms (“Event of Default”): (a) failure by the Borrower to repay the Loan (whole or part) on the Due Date; (b) breach / non-performance of any representation, warranty, covenant, undertaking or obligations under these Terms (including non-submission of documents or execution thereof), or any change in the information furnished by the Borrower to the Lender, if deemed material by the Lender; (c) the Borrower is subjected to any insolvency or bankruptcy proceeding or a receiver is appointed for its assets; (d) if the Borrower commits default in relation to any other loan or credit facility and /or statutory taxes and dues owed, or enters into any compromise with its creditors, or admits any inability in payment of its other debts; (e) the performance of obligations under these Terms becomes void or illegal; (f) non-payment of any of dues and / or outstanding amounts to any other financial institutions; and / or (g) any event which, with the passage of time, is likely to become an Event of Default. On the happening of any Event of Default, the Lender may at its sole discretion , without prejudice to other rights and claims under these Terms, exercise any or all of the following rights, i.e.,: (a) recall the Loan and / or declare the Loan to become immediately due and payable; (b) levy Default Charges / Interest on the Outstanding Amount from the date when the Event of Default occurs until the date when the Event of Default has ceased to exist; and / or (c) exercise any other rights or remedies available to the Lender under applicable law including initiating civil and criminal proceedings. </li>
+                    <li><b>Unconditional Cancellability:</b> The Lender reserves the unconditional right to cancel the Loan and / or any tranches advanced / to be advanced (either fully or partially) without giving any prior notice to the Borrower, on the occurrence of any one or more of the following (a) in case the Loan / part of the Loan are not utilised by the Borrower; (b) in case of ‘Deterioration in the Creditworthiness’ of the Borrower in any manner whatsoever; (c) in case of non-compliance of these Terms. For the purpose of this clause, Deterioration in the Creditworthiness shall mean and include without limitation, the following events: (a) downgrade of the rating of the Borrower by a credit rating agency; and / or (b) any other reason / event in the opinion of the Lender constituting or which may constitute Deterioration in the Creditworthiness. </li>
+                    <li><b>Disclaimer:</b> The Borrower agrees and acknowledges that the Lender shall not be liable or responsible for any defect in the consumer durable products / goods purchased by the Borrower, in the event of any complaints / queries with respect to a product purchased from a third party from the proceeds of the Loan. The Borrower shall directly address such complaints / queries with the seller / manufacturer/ retailer or any other third party associated with selling such product. </li>
+                    <li><b>Disclosure:</b> The Borrower authorizes the Lender to disclose any information in relation to the Loan with: (a) RBI; (b) credit information companies / bureaus and information utilities; (c) any governmental / regulatory / statutory authority; (d) other financial institutions and industry bodies; (e) affiliates and group companies of the Lender; and / or (f) third party engaged by the Lender for purpose of the Loan including but not limited to KYC collection, recovery of dues and repayment and / or such other services as deemed necessary by the Lender. The Borrower hereby acknowledges and agrees that the RBI and / or any credit bureau, information utilities, any governmental / regulatory / statutory authority may publicly publish such data, subject to applicable laws. </li>
+                    <li><b>Indemnity:</b> The Borrower shall indemnify and hold harmless the Lender and its directors, officers and agents, from and against any and all costs, expenses, direct or indirect claims, liabilities, demands and / or claims whatsoever, including any third-party claims for damages incurred as a consequence of occurrence of an Event of Default, breach of the terms and conditions of these Terms or acts of omission and commission on the part of the Borrower, or otherwise on account of the Loan. </li>
+                    <li><b>Evidence to Debt/ Electronic Evidence:</b> The Lender may generate physical copies of these Terms from its system or produce these Terms in any other form at its discretion and the same shall be fully binding on the Borrower and such computer generated certificate / statement from the Lender’s system shall be conclusive evidence of the existence of the Outstanding Amounts of the Borrower. The Borrower hereby waives any right it may have under contract or applicable law to contest or raise an invalidity against such electronic records. </li>
+                    <li><b>Assignment:</b> The Lender may, without Borrower's consent or notice can assign its rights & obligations under these Terms to its aﬃliates or assignee but the Borrower is not entitled to directly or indirectly assign the benefit or obligation of these Terms to any third party. </li>
+                    <li><b>Dispute Resolution:</b> Any or all disputes, claims, differences arising out of or in connection with these Terms between the Lender and the Borrower shall be settled by arbitration to be referred to a sole arbitrator to be appointed by the Lender and the place of the arbitration shall be New Delhi. </li>
+                    <li><b>Governing Law:</b> In the event of any dispute or controversy arising out of the arbitration clause, shall be governed by laws of India and the Courts at New Delhi shall have sole and exclusive jurisdiction. </li>
+                    <li><b>Notices:</b> Any notice to be given to Borrower in respect of these Terms shall be deemed to have been validly given and received if provided by using telephonic call (recorded) or text message to the registered mobile number of the Borrower, email to registered email id and written notice by courier or registered post to registered address of Borrower. </li>
+                    <li><b>Joint and Several Liability:</b> The obligations of the Borrower(s) and Co-Borrowers (if any) under these Terms shall be joint and several. </li>
+                    <li><b>NACH Mandate:</b> The amount mentioned on NACH Mandate for approval from borrower is 250% of the existing sanctioned credit limit/ loan amount as it covers possible increase of credit limit in near future, processing fee, interest and other charges levied in the event of default. Lenders, may at their absolute discretion, waive or reduce the charges as mentioned above, on a case to case basis. </li>
+                    <li><b>Appropriation:</b> Any payments made by or recovered from the Borrower or otherwise shall be appropriated in a manner deemed fit by the Lender, as per its policies. </li>
+                    <li><b>Set-off:</b> The Lender shall be entitled to, without further notice, set -off any monies with the Lender or any monies payable by the Lender to the Borrower(s) against all Outstanding Amounts of the Borrower with the Lender. </li>
+                </ol>
+                <p>In Witness Where Of the Borrower hereby accepts the terms and conditions this Agreement. For any queries, you may write to us at care@scaleup financial.com </p>
+                <p>Look forward to serving you. </p>
+                <p>By clicking on "I Accept", the Borrower hereby executes and electronically accept these Terms. Upon acceptance of these Terms, two original counterparts shall be electronically generated, one of which shall be automatically sent to the e-mail disclosed by the Borrower in the Commercial Terms, the other shall be retained by the Lender for its records. </p>
+                <br /><br /><br /><br /><br /><br />
+                <p>Signed, Sealed and delivered, </p>
+
+                <p>
+                        <!-- For any queries, you may write to us at <a
+                            href="mailto:care@pmifs.com"><b>care@pmifs.com</b></a><br /> -->
+                        For any queries, you may write to us at <a
+                            href="mailto:care@scaleupfinancial.com"><b>care@scaleupfinancial.com</b></a><br />
+
+                        Look forward to serving you.<br />
+
+                        Kind Regards<br />
+
+                        <img src="https://wwwstatic-prod.s3.ap-south-1.amazonaws.com/images/Sujit.png" alt="logo" width="150" height="50" style="width: 150px; height: 50px;"><br />
+
+                        Sujeth Das<br />
+
+                        Head. Credit<br />
+                    </p>
+            <p><strong>Digital signature of the customer</strong></p>
+                <p><img class="fingerImage"
+                        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAA6ADoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAopjyxx43uq54G44zTwQRkHIoAKKKKACiiigDjJfGGuXOo38Oh+F/7TtrO4a3af7esJLrjcNrr2ORwTkYPeq8sfxB8RnbutPCtqMhsFbu4Y/UfLtOexDAr3Bqb4YyLN4dvZGx9rbUZ/tYHUSjAOffAWu1oA8t1LwV8N9HZx4r1X7ZqDRb2m1TVG+0NHk4ICspIyCAQM8EZPNZmh+E/hh4shuh4MvZtP1aHJiuIbmZZ4iMEOEkbJXkDPHXqDzXNa7q/hrxJ8SNXbxxc3tpDpcnkWb6aqvFHGGwDLLGGfcWOQuAEOR1JFXNa8E+DdbSM3HxYtZlgXFvJd3FtNOi8kAyZDsASeO1AGho03j658VXnhfWPiA2maxCvnQINMgmiuYf76NwQeDlSM9+ecdV/wi3j9f+apr+Oh2/8A8VXG/C34aeEPEvhe5vNV0g3xiv54LfUPNuIftkKkbZdm8AZJI4/u885rtv8AhSXw8/6F7/yduP8A45QBlw+JPEvhfxbo+i6n4k0vxNFqNyIJI4LdYbyDcDh9iHHljGST2zXqlYOg+CvDXhhg+jaNaWku0p5ypuk2nqN7ZbHA71vUAec3HgbxZpl9rFx4V8WRWFvf3Ml6LSaySQec4GcuQSASOw4HY021+IK6j4V1rT9csb6w8SWFq6XenWgYTyZG0SW5GSVJIO4Z29ScYY+kVieIfCOieKVtzqtn5k1q/mW9xHI0csTequpBHrjOMgHsKAPIPhre+KrLwhbt4cudC8R2ABa40PesF1bBmOBvwASeSxcc7TtznNQatp0vjNr/AMH6X8MtH0PVEEL3N8J7cmzUsGB/dpnLBSMA5wemDXoo+D/g8XbXpt79r8nP2w6jP52cY+9v9OK6Dw34Q0PwlFcpo1l5DXT+ZPK8jSSSt6szEk9Tx05PqaANmGJYYI4lACooUYGOlPoooAKKKKACiiigAooooAKKKKACiiigD//Z" />
+                </p>
+                <p
+                    style="color: white; font-size: 100px; line-height: 100px; padding: 0; margin: 0; position: relative;">
+                    Sign Here</p>
+                <p>____________________________________________<span style="font-size: 50px;">&#x270D;</span></p>
+                <p><strong>SIGNED AND DELIVERED by the within named Borrower</strong></p>
+            </div>
+        </div>
+    </body>
+
+</html>
